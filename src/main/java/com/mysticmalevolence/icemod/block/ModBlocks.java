@@ -28,6 +28,15 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.GLASS)
             ));
+    public static final DeferredBlock<Block> CRACKED_ICE_BRICKS = registerBlock("cracked_ice_bricks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.ICE)
+                    .instrument(NoteBlockInstrument.CHIME)
+                    .friction(0.98F)
+                    .strength(0.6F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.GLASS)
+            ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

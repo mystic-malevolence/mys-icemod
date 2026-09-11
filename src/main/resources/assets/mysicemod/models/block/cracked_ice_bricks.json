@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mysicemod:block/cracked_ice_bricks"
+  }
+}

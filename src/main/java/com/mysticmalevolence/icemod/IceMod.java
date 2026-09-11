@@ -1,6 +1,7 @@
 package com.mysticmalevolence.icemod;
 
 import com.mysticmalevolence.icemod.block.ModBlocks;
+import com.mysticmalevolence.icemod.item.ModCreativeModeTabs;
 import com.mysticmalevolence.icemod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -51,10 +52,12 @@ public class IceMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        // Register the item to a creative tab
+        // Register the item to a vanilla creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -67,13 +70,14 @@ public class IceMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+        /*if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ICEBRICK);
-        }
+        }*/
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.ICE_BRICKS);
         }
     }
+    //dedicated tab is preferred, left for example
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

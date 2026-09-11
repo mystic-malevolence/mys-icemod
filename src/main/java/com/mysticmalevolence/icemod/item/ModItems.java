@@ -9,8 +9,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(IceMod.MODID);
 
-    public static final DeferredItem<Item> ICEBRICK = ITEMS.register("ice_brick",
-            () -> new Item(new Item.Properties()));
+    /*public static final DeferredItem<Item> ICEBRICK = ITEMS.register("ice_brick",
+            () -> new Item(new Item.Properties()));*/
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
