@@ -33,7 +33,7 @@ public class ModBlocks {
                     .mapColor(MapColor.ICE)
                     .instrument(NoteBlockInstrument.CHIME)
                     .friction(0.98F)
-                    .strength(0.6F)
+                    .strength(0.5F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.GLASS)
             ));
