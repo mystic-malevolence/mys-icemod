@@ -1,7 +1,7 @@
-package com.mysticmalevolence.icemod.block;
+package com.mysticmalevolence.icemod.registry;
 
 import com.mysticmalevolence.icemod.IceMod;
-import com.mysticmalevolence.icemod.item.ModItems;
+import com.mysticmalevolence.icemod.block.IceBricksBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -15,12 +15,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class MIMBlockRegistry {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(IceMod.MODID);
 
     public static final DeferredBlock<Block> ICE_BRICKS = registerBlock("ice_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new IceBricksBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.ICE)
                     .instrument(NoteBlockInstrument.CHIME)
                     .friction(0.98F)
@@ -29,7 +29,7 @@ public class ModBlocks {
                     .sound(SoundType.GLASS)
             ));
     public static final DeferredBlock<Block> CRACKED_ICE_BRICKS = registerBlock("cracked_ice_bricks",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new IceBricksBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.ICE)
                     .instrument(NoteBlockInstrument.CHIME)
                     .friction(0.98F)
@@ -45,7 +45,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block){
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        MIMItemRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus){

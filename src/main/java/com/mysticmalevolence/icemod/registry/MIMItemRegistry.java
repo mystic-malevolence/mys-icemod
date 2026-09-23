@@ -1,12 +1,10 @@
-package com.mysticmalevolence.icemod.item;
+package com.mysticmalevolence.icemod.registry;
 
 import com.mysticmalevolence.icemod.IceMod;
-import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class ModItems {
+public class MIMItemRegistry {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(IceMod.MODID);
 
     /*public static final DeferredItem<Item> ICEBRICK = ITEMS.register("ice_brick",
