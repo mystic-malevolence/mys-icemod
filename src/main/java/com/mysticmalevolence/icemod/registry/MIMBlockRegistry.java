@@ -37,6 +37,13 @@ public class MIMBlockRegistry {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.GLASS)
             ));
+    public static final DeferredBlock<Block> SNOW_BRICKS = registerBlock("snow_bricks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .strength(0.7F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.SNOW)
+            ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

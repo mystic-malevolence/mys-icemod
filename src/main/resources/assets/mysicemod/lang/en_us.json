@@ -2,6 +2,8 @@
   "item.mysicemod.ice_brick": "Ice Brick",
   "block.mysicemod.ice_bricks": "Ice Bricks",
   "block.mysicemod.cracked_ice_bricks": "Cracked Ice Bricks",
+  "block.mysicemod.snow_bricks": "Snow Bricks",
+  "block.mysicemod.snowsaic": "Snowsaic",
 
   "creativetab.mysicemod.ice_tab": "Malevolent's Ice Mod"
 }
