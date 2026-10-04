@@ -22,6 +22,8 @@ public class MIMCreativeModeRegistry {
                         output.accept(MIMBlockRegistry.ICE_BRICKS);
                         output.accept(MIMBlockRegistry.CRACKED_ICE_BRICKS);
                         output.accept(MIMBlockRegistry.SNOW_BRICKS);
+                        output.accept(MIMBlockRegistry.SNOWSAIC);
+                        output.accept(MIMBlockRegistry.POWDER_SNOWSAIC);
 
                     }).build());
 

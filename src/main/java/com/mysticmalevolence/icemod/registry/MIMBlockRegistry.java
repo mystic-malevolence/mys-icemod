@@ -5,6 +5,7 @@ import com.mysticmalevolence.icemod.block.IceBricksBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.PowderSnowBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -39,6 +40,21 @@ public class MIMBlockRegistry {
             ));
     public static final DeferredBlock<Block> SNOW_BRICKS = registerBlock("snow_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .strength(0.7F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.SNOW)
+            ));
+    public static final DeferredBlock<Block> SNOWSAIC = registerBlock("snowsaic",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SNOW)
+                    .strength(0.7F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.SNOW)
+            ));
+    public static final DeferredBlock<Block> POWDER_SNOWSAIC = registerBlock("powder_snowsaic",
+            //() -> new PowderSnowsaicBlock(BlockBehaviour.Properties.of() //Redundant block type
+            () -> new PowderSnowBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SNOW)
                     .strength(0.7F)
                     .requiresCorrectToolForDrops()

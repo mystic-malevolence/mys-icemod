@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "mysicemod:ice_bricks",
-    "mysicemod:cracked_ice_bricks",
-    "mysicemod:snow_bricks"
+    "mysicemod:cracked_ice_bricks"
   ]
 }

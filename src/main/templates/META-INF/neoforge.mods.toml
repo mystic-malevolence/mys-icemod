@@ -46,8 +46,7 @@ displayName="${mod_name}" #mandatory
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-A mod that adds ice bricks,
-potentially other snow blocks in the future
+A mod that adds ice bricks and snow bricks
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
