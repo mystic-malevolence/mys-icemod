@@ -1,0 +1,92 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar"
+      },
+      "when": {
+        "axis": "y"
+      }
+    },
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar",
+        "x": 270
+      },
+      "when": {
+        "axis": "z"
+      }
+    },
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "axis": "x"
+      }
+    },
+
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar_cap"
+      },
+      "when": {
+        "axis": "y",
+        "cap": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar_cap",
+        "x": 270
+      },
+      "when": {
+        "axis": "z",
+        "cap": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar_cap",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "axis": "x",
+        "cap": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar_base"
+      },
+      "when": {
+        "axis": "y",
+        "base": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar_base",
+        "x": 270
+      },
+      "when": {
+        "axis": "z",
+        "base": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "mysicemod:block/pillar/ice_pillar_base",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "axis": "x",
+        "base": "true"
+      }
+    }
+  ]
+}

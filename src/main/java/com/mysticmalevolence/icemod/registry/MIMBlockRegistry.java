@@ -2,6 +2,7 @@ package com.mysticmalevolence.icemod.registry;
 
 import com.mysticmalevolence.icemod.IceMod;
 import com.mysticmalevolence.icemod.block.IceBricksBlock;
+import com.mysticmalevolence.icemod.block.IcePillarBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -59,6 +60,16 @@ public class MIMBlockRegistry {
                     .strength(0.7F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.SNOW)
+            ));
+
+    public static final DeferredBlock<Block> CHISELED_ICE = registerBlock("chiseled_ice",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(
+                    ICE_BRICKS.get())
+            ));
+
+    public static final DeferredBlock<Block> ICE_PILLAR = registerBlock("ice_pillar",
+            () -> new IcePillarBlock(BlockBehaviour.Properties.ofFullCopy(
+                    ICE_BRICKS.get())
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
