@@ -1,10 +1,18 @@
 {
   "item.mysicemod.ice_brick": "Ice Brick",
   "block.mysicemod.ice_bricks": "Ice Bricks",
+  "block.mysicemod.ice_brick_stairs": "Ice Brick Stairs",
+  "block.mysicemod.ice_brick_slab": "Ice Brick Slab",
+  "block.mysicemod.ice_brick_wall": "Ice Brick Wall",
   "block.mysicemod.cracked_ice_bricks": "Cracked Ice Bricks",
   "block.mysicemod.ice_pillar": "Ice Pillar",
   "block.mysicemod.chiseled_ice": "Chiseled Ice",
+  "block.mysicemod.chiseled_ice_button": "Chiseled Ice Button",
+
   "block.mysicemod.snow_bricks": "Snow Bricks",
+  "block.mysicemod.snow_brick_stairs": "Snow Brick Stairs",
+  "block.mysicemod.snow_brick_slab": "Snow Brick Slab",
+  "block.mysicemod.snow_brick_wall": "Snow Brick Wall",
   "block.mysicemod.snowsaic": "Snowsaic",
   "block.mysicemod.powder_snowsaic": "Powdered Snowsaic",
 

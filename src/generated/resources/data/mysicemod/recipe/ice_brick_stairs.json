@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ice_bricks",
+  "key": {
+    "#": {
+      "item": "mysicemod:ice_bricks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mysicemod:ice_brick_stairs"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "mysicemod:chiseled_ice"
+    },
+    "$": {
+      "item": "minecraft:ice"
+    }
+  },
+  "pattern": [
+    "$#$",
+    " # ",
+    "$#$"
+  ],
+  "result": {
+    "count": 6,
+    "id": "mysicemod:ice_pillar"
+  }
+}

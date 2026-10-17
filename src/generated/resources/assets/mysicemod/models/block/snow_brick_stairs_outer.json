@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "mysicemod:block/snow_bricks",
+    "side": "mysicemod:block/snow_bricks",
+    "top": "mysicemod:block/snow_bricks"
+  }
+}

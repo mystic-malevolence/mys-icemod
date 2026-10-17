@@ -5,10 +5,9 @@ import com.mysticmalevolence.icemod.block.IceBricksBlock;
 import com.mysticmalevolence.icemod.block.IcePillarBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.PowderSnowBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
@@ -26,45 +25,72 @@ public class MIMBlockRegistry {
                     .mapColor(MapColor.ICE)
                     .instrument(NoteBlockInstrument.CHIME)
                     .friction(0.98F)
-                    .strength(0.7F)
+                    .strength(0.5F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.GLASS)
             ));
+    public static final DeferredBlock<StairBlock> ICE_BRICK_STAIRS = registerBlock("ice_brick_stairs",
+            () -> new StairBlock(ICE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(
+                    ICE_BRICKS.get())
+            ));
+    public static final DeferredBlock<SlabBlock> ICE_BRICK_SLAB = registerBlock("ice_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(
+                    ICE_BRICKS.get())
+            ));
+    public static final DeferredBlock<WallBlock> ICE_BRICK_WALL = registerBlock("ice_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(
+                    ICE_BRICKS.get())
+            ));
+
     public static final DeferredBlock<Block> CRACKED_ICE_BRICKS = registerBlock("cracked_ice_bricks",
             () -> new IceBricksBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.ICE)
                     .instrument(NoteBlockInstrument.CHIME)
                     .friction(0.98F)
-                    .strength(0.5F)
+                    .strength(0.3F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.GLASS)
             ));
     public static final DeferredBlock<Block> SNOW_BRICKS = registerBlock("snow_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SNOW)
-                    .strength(0.7F)
+                    .strength(0.25F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.SNOW)
             ));
+
+    public static final DeferredBlock<StairBlock> SNOW_BRICK_STAIRS = registerBlock("snow_brick_stairs",
+            () -> new StairBlock(SNOW_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(
+                    SNOW_BRICKS.get())
+            ));
+    public static final DeferredBlock<SlabBlock> SNOW_BRICK_SLAB = registerBlock("snow_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(
+                    SNOW_BRICKS.get())
+            ));
+    public static final DeferredBlock<WallBlock> SNOW_BRICK_WALL = registerBlock("snow_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(
+                    SNOW_BRICKS.get())
+            ));
+
     public static final DeferredBlock<Block> SNOWSAIC = registerBlock("snowsaic",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.SNOW)
-                    .strength(0.7F)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.SNOW)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(
+                    SNOW_BRICKS.get())
             ));
     public static final DeferredBlock<Block> POWDER_SNOWSAIC = registerBlock("powder_snowsaic",
-            //() -> new PowderSnowsaicBlock(BlockBehaviour.Properties.of() //Redundant block type
-            () -> new PowderSnowBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.SNOW)
-                    .strength(0.7F)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.SNOW)
+            () -> new PowderSnowBlock(BlockBehaviour.Properties.ofFullCopy(
+                    SNOW_BRICKS.get())
             ));
 
     public static final DeferredBlock<Block> CHISELED_ICE = registerBlock("chiseled_ice",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(
                     ICE_BRICKS.get())
+            ));
+    public static final DeferredBlock<ButtonBlock> CHISELED_ICE_BUTTON = registerBlock("chiseled_ice_button",
+            () -> new ButtonBlock(BlockSetType.IRON,10, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.ICE)
+                    .strength(0.5F)
+                    .requiresCorrectToolForDrops()
+                    .noCollission()
             ));
 
     public static final DeferredBlock<Block> ICE_PILLAR = registerBlock("ice_pillar",

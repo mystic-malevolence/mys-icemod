@@ -21,11 +21,20 @@ public class MIMCreativeModeRegistry {
                         //output.accept(ModItems.ICEBRICK);
                         output.accept(MIMBlockRegistry.ICE_BRICKS);
                         output.accept(MIMBlockRegistry.CRACKED_ICE_BRICKS);
-                        output.accept(MIMBlockRegistry.SNOW_BRICKS);
-                        output.accept(MIMBlockRegistry.SNOWSAIC);
-                        output.accept(MIMBlockRegistry.POWDER_SNOWSAIC);
+                        output.accept(MIMBlockRegistry.ICE_BRICK_STAIRS);
+                        output.accept(MIMBlockRegistry.ICE_BRICK_SLAB);
+                        output.accept(MIMBlockRegistry.ICE_BRICK_WALL);
+
                         output.accept(MIMBlockRegistry.CHISELED_ICE);
                         output.accept(MIMBlockRegistry.ICE_PILLAR);
+                        output.accept(MIMBlockRegistry.CHISELED_ICE_BUTTON);
+
+                        output.accept(MIMBlockRegistry.SNOW_BRICKS);
+                        output.accept(MIMBlockRegistry.SNOW_BRICK_STAIRS);
+                        output.accept(MIMBlockRegistry.SNOW_BRICK_SLAB);
+                        output.accept(MIMBlockRegistry.SNOW_BRICK_WALL);
+                        output.accept(MIMBlockRegistry.SNOWSAIC);
+                        output.accept(MIMBlockRegistry.POWDER_SNOWSAIC);
 
                     }).build());
 
