@@ -25,7 +25,7 @@ public class IceModClient {
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         // Some client setup code
-        IceMod.LOGGER.info("HELLO FROM CLIENT SETUP");
-        IceMod.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        //IceMod.LOGGER.info("HELLO FROM CLIENT SETUP");
+        //IceMod.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
     }
 }
