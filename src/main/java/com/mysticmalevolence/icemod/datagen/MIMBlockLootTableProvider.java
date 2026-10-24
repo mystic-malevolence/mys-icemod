@@ -53,7 +53,6 @@ public class MIMBlockLootTableProvider extends BlockLootSubProvider {
         );
         dropSelf(MIMBlockRegistry.SNOW_BRICK_WALL.get());
         dropSelf(MIMBlockRegistry.SNOWSAIC.get());
-        dropSelf(MIMBlockRegistry.POWDER_SNOWSAIC.get());
     }
 
     @Override

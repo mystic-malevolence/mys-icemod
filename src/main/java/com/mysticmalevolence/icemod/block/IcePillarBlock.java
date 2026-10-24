@@ -34,7 +34,6 @@ public class IcePillarBlock extends RotatedPillarBlock implements SimpleWaterlog
     public static final Map<Direction.Axis, VoxelShape> BASE_SHAPE;
     public static final Map<Direction.Axis, VoxelShape> CAP_SHAPE;
 
-
     public IcePillarBlock(Properties properties) {
         super(properties);
         registerDefaultState(getStateDefinition()
@@ -82,8 +81,10 @@ public class IcePillarBlock extends RotatedPillarBlock implements SimpleWaterlog
      */
     private BlockState getPillarState(BlockGetter level, BlockPos pos, Direction.Axis axis) {
 
-        boolean hasNeighborAbove = level.getBlockState(pos.relative(axis,1)).getBlock() == this;
-        boolean hasNeighborBelow = level.getBlockState(pos.relative(axis, -1)).getBlock() == this;
+        boolean hasNeighborAbove = level.getBlockState(pos.relative(axis,1)).getBlock() == this
+                && (axis == level.getBlockState(pos.relative(axis,1)).getValue(AXIS));
+        boolean hasNeighborBelow = level.getBlockState(pos.relative(axis, -1)).getBlock() == this
+                && (axis == level.getBlockState(pos.relative(axis,-1)).getValue(AXIS));
 
         if(axis.isVertical() && hasNeighborAbove && !hasNeighborBelow){
             return defaultBlockState().setValue(CAP, true).setValue(BASE, true);

@@ -3,6 +3,7 @@ package com.mysticmalevolence.icemod.registry;
 import com.mysticmalevolence.icemod.IceMod;
 import com.mysticmalevolence.icemod.block.IceBricksBlock;
 import com.mysticmalevolence.icemod.block.IcePillarBlock;
+import com.mysticmalevolence.icemod.block.SnowsaicBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -73,12 +74,12 @@ public class MIMBlockRegistry {
             ));
 
     public static final DeferredBlock<Block> SNOWSAIC = registerBlock("snowsaic",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(
+            () -> new SnowsaicBlock(BlockBehaviour.Properties.ofFullCopy(
                     SNOW_BRICKS.get())
             ));
     public static final DeferredBlock<Block> POWDER_SNOWSAIC = registerBlock("powder_snowsaic",
             () -> new PowderSnowBlock(BlockBehaviour.Properties.ofFullCopy(
-                    SNOW_BRICKS.get())
+                    SNOW_BRICKS.get()).noLootTable()
             ));
 
     public static final DeferredBlock<Block> CHISELED_ICE = registerBlock("chiseled_ice",
